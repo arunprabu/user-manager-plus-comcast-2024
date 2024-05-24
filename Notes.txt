@@ -102,3 +102,59 @@ Routing in Angular
   now, check the app. You have SPA
 
 ===============
+
+Building Blocks
+-----
+  Components
+  Directives 
+  Services 
+  Interfaces / Models 
+  Modules 
+  Guards
+  Pipes 
+  Interceptor 
+
+Concepts
+-----
+  Data Binding 
+  Routing 
+  
+
+Project Structure
+----
+  src/
+    app/
+      shared/
+        components/
+          header/
+          footer/
+          menu/
+        directives/
+        services/
+      home/
+      about/
+      contact/
+      concepts/
+      products/
+
+Data Binding 
+------
+  * keeping the data in comp ts and displaying in comp html 
+
+  1. Interpolation
+      TS => HTML
+      * using {{ }} to display data in html
+       
+
+  2. Property Binding 
+      TS => HTML 
+      * using [] to display in html
+
+
+  3. Event Binding 
+      TS <=== HTML 
+      * using () to call a fn 
+
+  4. Two Way Binding
+  5. Custom Property Binding 
+  6. Custom Event Binding 

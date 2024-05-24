@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   ]
 })
 export class ConceptsComponent {
+  // interpolation
+  appName = "User Manager Plus Comcast 2024";
 
+  // property binding
+  courseName = "Angular 16 - Intermediate Level";
+
+  // event binding
+  handleClick() {
+    alert('clicked');
+  }
 }
