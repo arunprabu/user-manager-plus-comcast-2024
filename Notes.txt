@@ -1,0 +1,104 @@
+Angular 
+-----
+  Webapps 
+  -----
+    1. Server Side Rendering Apps (SSR)
+        * Pages will refresh / reload 
+        * a.k.a Traditional Webapps 
+
+    2. Client Side Rendering Apps (CSR) = SPA + RESTful API
+        * Pages will NOT refresh / reload
+        * a.k.a Modern Webapps 
+
+        1. Front End App (SPA)  -- We will develop this 
+        2. Back End App (RESTful API) - Not this 
+
+    
+        Single Page App (SPA)
+        -----
+          Characteristics of SPA 
+          -----------------------
+            1. Pages should NOT Refresh [DONE]
+            2. URL should change [DONE]
+            3. History should be maintained w/o page refresh [DONE]
+            4. Header and Footer should not be loaded again and again [DONE]
+            5. The section in b/w Header and Footer should show contextual updates [DONE]
+            6. Active Menu should be set [TODO]
+            7. Page Title should be updated [TODO]
+
+        SPA Frameworks / Libraries 
+        ------
+          #1 React JS (Library)
+          #2 VueJS  (Framework)
+          #3 Angular (Framework)
+          #4 Svelte (Framework)
+
+=========
+  Install Angular CLI 
+  ---
+  
+
+====
+  1. File Walkthru [DONE]
+  2. ng arch [DONE]
+  3. How ng apps are working? [DONE]
+
+====
+Thinking in Angular 
+-----
+  Step 1. Identify the number of components 
+  Step 2: Understanding the component hierarchy 
+
+
+
+=====
+
+
+Routing in Angular
+--------
+  Step 0. 
+    Identify the Urls for the Menus 
+
+      Home                - localhost:4200/
+      Concepts            - localhost:4200/concepts
+      User Manager        - localhost:4200/users
+      Products            - localhost:4200/products
+      About               - localhost:4200/about
+      Contact             - localhost:4200/contact
+
+  Step 1: 
+    Let's setup the urls in the menus 
+
+  Step 2:
+    Let's create the necessary components to show up in between header and footer 
+
+      Home                - localhost:4200/                       - HomeComponent
+      Concepts            - localhost:4200/concepts               - ConceptsComponent
+      User Manager        - localhost:4200/users                  - UsersComponent    [LATER]
+      Products            - localhost:4200/products               - ProductsComponent [LATER]
+      About               - localhost:4200/about                  - AboutComponent
+      Contact             - localhost:4200/contact                - ContactComponent
+
+      ng g c home -t -s 
+      ng g c concepts -s 
+      ng g c about -s 
+      ng g c contact -s 
+    
+  Step 3: 
+    Let's configure the routes a.k.a urls in app-routing.module.ts 
+
+  
+  Step 4: 
+    Check the app. URL will be stable. But the component won't be loaded in b/w header and footer.
+    Let's fix it.
+
+    LEt's setup router-outlet in app.component.html in b/w header and footer 
+
+  Step 5:
+  ---
+    Check the app. Page will still refresh. Let's fix it. 
+    replace href in menu component html with routerLink 
+
+  now, check the app. You have SPA
+
+===============
