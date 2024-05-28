@@ -106,8 +106,8 @@ Routing in Angular
 Building Blocks
 -----
   Components [PARTIALLY COMPLETED]
-  Directives [PARTIALLY COMPLETED]
-  Services 
+  Directives [DONE]
+  Services [TODAY]
   Interfaces / Models 
   Modules 
   Guards
@@ -118,8 +118,8 @@ Concepts
 -----
   Data Binding [DONE]
   Routing [PARTIALLY COMPLETED]
-  Forms 
-  REST API Calls 
+  Forms [TODAY]
+  REST API Calls [TODAY]
   
 
 Project Structure
@@ -152,6 +152,9 @@ Data Binding
   2. Property Binding 
       TS => HTML 
       * using [] to display in html
+
+      --- Learn about class binding [ngClass]
+      --- Learn about style binding [ngStyle]
 
   3. Event Binding 
       TS <=== HTML 
@@ -205,4 +208,42 @@ Directives
 
 
 
-    
+=====
+Forms in Angular
+===============
+  Types of Forms in Angular 
+    1. Template Driven Forms 
+      * made with just html template 
+      * directives should be used for validation
+      * easiest type of form 
+      * suitable for a very very small form 
+      
+      Disadv 
+      ----
+        1. Not suitable for Complex Form validations 
+        2. Not suitable for Unit Testing 
+
+    2. Reactive Forms [RECOMMENDED]
+       * made with html + ts 
+       * validation thru ts 
+       * easy 
+       * preferred for bigger forms 
+       * suitable for Complex Form validations 
+       * suitable for Unit Testing 
+
+      Disadv 
+      -----
+        1. Time Consuming 
+
+===========
+
+      
+ Reactive Forms 
+ -----
+  step 0: Have the html form 
+  step 1: Have the equivalent ts logic for the form tag 
+  step 2: Have the equivalent ts logic for the form elements 
+  step 3: connect the html form tag with ts equivalent
+  step 4: connect the html form elements with the ts equivalents 
+
+  step 5: Let's work on validations 

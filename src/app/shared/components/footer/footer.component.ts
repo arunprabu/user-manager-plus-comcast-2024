@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   template: `
     <footer class="text-center">
-      <hr />
+      <hr/>
       <app-menu>
         <li class="nav-item">
           <a class="nav-link" href="#">Back to Top</a>

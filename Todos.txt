@@ -1,9 +1,19 @@
 1. Learn about integrating bootstrap in angular app. 
 2. Learn about Conditional Content Projection and implement Back to Top as first menu in footer.
 3. Implement Active Menu [using Attribute Directive]
-4. Implement Page Title [After completing data binding you can work on]
+4. Implement Page Title [After completing data binding, custom attribute directive you can work on]
 5. Disable the button on click in ConceptsComponent
 6. Change the lable of the button to "Clicked" on click in ConceptsComponent
 7. learn about *ngIf with else (try it out in concepts.comp.html)
 8. find out index in *ngFor and display before the skill name (try it out in concepts.comp.html)
+9. Work on ngSwitch 
+10. Work on handling mouseout in colorizer directive 
+    // Ref: https://github.com/arunprabu/employee-mgmt-ng-oct2022/blob/master/src/app/unit-testing-demo/directives/highlight.directive.ts
+11. Learn about @HostBinding() in colorizer directive 
+12. try handling values of the attribute directive in in colorizer directive 
+  / /Ref: https://github.com/arunprabu/employee-mgmt-ng-oct2022/blob/master/src/app/unit-testing-demo/components/unit-testing-demo/unit-testing-demo.component.html
+13. Work on Custom Structural Directive 
+    Refer: https://v16.angular.io/guide/structural-directives#creating-a-structural-directive
 
+14. Access data from child component using @ViewChild()
+15. Routing through Typescript in Go back button in Add user comp 

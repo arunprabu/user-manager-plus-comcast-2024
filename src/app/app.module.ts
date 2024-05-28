@@ -10,9 +10,13 @@ import { HomeComponent } from './home/home.component';
 import { ConceptsComponent } from './concepts/components/concepts.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CpbComponent } from './concepts/components/cpb/cpb.component';
 import { CebComponent } from './concepts/components/ceb/ceb.component';
+import { ColorizerDirective } from './concepts/directives/colorizer.directive';
+import { ListUsersComponent } from './users/components/list-users/list-users.component';
+import { AddUserComponent } from './users/components/add-user/add-user.component';
+import { UserDetailsComponent } from './users/components/user-details/user-details.component';
 
 // Main Switching Box
 @NgModule({
@@ -26,12 +30,17 @@ import { CebComponent } from './concepts/components/ceb/ceb.component';
     AboutComponent,
     ContactComponent,
     CpbComponent,
-    CebComponent
+    CebComponent,
+    ColorizerDirective,
+    ListUsersComponent,
+    AddUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, // for Template Driven Form
+    ReactiveFormsModule // for Reactive Forms
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule is bootstraped with a component -- AppComponent
