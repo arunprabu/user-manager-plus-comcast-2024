@@ -105,8 +105,8 @@ Routing in Angular
 
 Building Blocks
 -----
-  Components
-  Directives 
+  Components [PARTIALLY COMPLETED]
+  Directives [PARTIALLY COMPLETED]
   Services 
   Interfaces / Models 
   Modules 
@@ -116,8 +116,10 @@ Building Blocks
 
 Concepts
 -----
-  Data Binding 
-  Routing 
+  Data Binding [DONE]
+  Routing [PARTIALLY COMPLETED]
+  Forms 
+  REST API Calls 
   
 
 Project Structure
@@ -135,6 +137,8 @@ Project Structure
       about/
       contact/
       concepts/
+        components/
+        directives/
       products/
 
 Data Binding 
@@ -145,16 +149,60 @@ Data Binding
       TS => HTML
       * using {{ }} to display data in html
        
-
   2. Property Binding 
       TS => HTML 
       * using [] to display in html
-
 
   3. Event Binding 
       TS <=== HTML 
       * using () to call a fn 
 
-  4. Two Way Binding
+  4. Two Way Binding 
+      TS <=> HTML 
+      * using [(ngModel)] 
+      * must be implemented in form elements 
+      * must import FormsModule in app.module.ts 
+
   5. Custom Property Binding 
   6. Custom Event Binding 
+
+
+Cross Component Communication
+--------
+  1. Parent to Child Component Communication  [DONE]
+      using Custom Property Binding 
+
+  2. Child to Parent Component Communication [DONE]
+      using Custom Event Binding 
+
+  3. Any to Any Component Communication
+      3.1 using RxJS + Observables (TO LEARN)
+        Prereq: Service, Dep Injection, RxJS + Observables 
+      3.2 using NgRx  (State management framework)  
+
+
+=============
+
+Directives
+-----
+  * special instructions to the DOM 
+
+  1. Attribute Directives 
+      Examples: 
+        routerLink 
+        routerLinkActive
+        routerLinkActiveOptions 
+
+  2. Structural Directives 
+      => these directives impact the Structural layer (HTML)
+
+      *ngIf [DONE]
+      *ngFor [DONE]
+      ngSwitch [TODO]
+
+  3. Custom Attribute Directives [TO LEARN]
+  4. Custom Structural Directives [TODO]
+
+
+
+    

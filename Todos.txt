@@ -1,3 +1,9 @@
 1. Learn about integrating bootstrap in angular app. 
 2. Learn about Conditional Content Projection and implement Back to Top as first menu in footer.
-3. Implement Active Menu
+3. Implement Active Menu [using Attribute Directive]
+4. Implement Page Title [After completing data binding you can work on]
+5. Disable the button on click in ConceptsComponent
+6. Change the lable of the button to "Clicked" on click in ConceptsComponent
+7. learn about *ngIf with else (try it out in concepts.comp.html)
+8. find out index in *ngFor and display before the skill name (try it out in concepts.comp.html)
+

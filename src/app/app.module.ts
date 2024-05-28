@@ -7,9 +7,12 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { HomeComponent } from './home/home.component';
-import { ConceptsComponent } from './concepts/concepts.component';
+import { ConceptsComponent } from './concepts/components/concepts.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { CpbComponent } from './concepts/components/cpb/cpb.component';
+import { CebComponent } from './concepts/components/ceb/ceb.component';
 
 // Main Switching Box
 @NgModule({
@@ -21,11 +24,14 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     ConceptsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    CpbComponent,
+    CebComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule is bootstraped with a component -- AppComponent

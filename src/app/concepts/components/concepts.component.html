@@ -1,6 +1,9 @@
 <div>
   <h1>Angular Concepts</h1>
 
+  <p>Data Received From Child Comp: {{ dataReceivedFromChildComp?.message }}</p>
+  <p>Report Id: {{ dataReceivedFromChildComp?.reportId }}</p>
+
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button
@@ -72,18 +75,27 @@
       <p>{{ appName }}</p>
       <!-- the following is not recommended -- go with prop binding -->
       <input type="text" value="{{ appName }}" />
-      
-      <hr/>
+
+      <hr />
 
       <h3>Property Binding</h3>
       <input type="text" [value]="courseName" />
-      
-      <hr/>
+
+      <hr />
       <h3>Event Binding</h3>
-      <button (click)="handleClick()">Click Me</button>
-      
+      <button (click)="handleClick($event)">Click Me</button>
+
+      <hr />
+      <h3>Two Way Binding</h3>
+      <p>{{ city }}</p>
+      <!--interpolation  -->
+      <input type="text" [value]="city" />
+      <!-- property binding -->
+
+      <input type="text" [(ngModel)]="city" />
+      <!-- two way binding -->
     </div>
-     <div
+    <div
       class="tab-pane fade"
       id="cpb-tab-pane"
       role="tabpanel"
@@ -91,7 +103,11 @@
       tabindex="0"
     >
       <h2>Custom Property Binding</h2>
-      
+      <!-- Step 2  of CPB: Bind data into the custom property in parent comp -->
+      <app-cpb></app-cpb>
+      <app-cpb [age]="30"></app-cpb>
+      <app-cpb [age]="40"></app-cpb>
+      <app-cpb [age]="personAge"></app-cpb>
     </div>
 
     <div
@@ -102,7 +118,8 @@
       tabindex="0"
     >
       <h2>Custom Event Binding</h2>
-     
+      <!-- step 3: in parent comp, Listen to the triggered event -- and receive the data using $event-->
+      <app-ceb (onReportGenerated)="handleReportGenerated($event)"></app-ceb>
     </div>
 
     <div
@@ -113,7 +130,44 @@
       tabindex="0"
     >
       <h2>Directives</h2>
-      
+
+      <pre>
+        Directives
+        -----
+          * special instructions to the DOM 
+
+          1. Attribute Directives 
+              Examples: 
+                routerLink 
+                routerLinkActive
+                routerLinkActiveOptions 
+
+          2. Structural Directives 
+              => these directives impact the Structural layer (HTML)
+
+              *ngIf 
+              *ngFor 
+              ngSwitch 
+      </pre>
+
+      <h4>*ngIf</h4>
+      <!-- Conditionally render HTML -->
+      <div class="alert alert-success" role="alert" *ngIf="isLoggedIn">
+        Thank you for signing in. You can access premium features of the app!
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="!isLoggedIn">
+        Seems like you are NOT authenticated. Please sign in.
+      </div>
+      <!-- TODO: learn about *ngIf with else -->
+
+      <hr />
+      <h4>*ngFor</h4>
+
+      <!-- Rendering multiple elements in loop -->
+      <ul>
+        <li *ngFor="let skill of skills">{{ skill }}</li>
+      </ul>
+      <!-- TODO: find out index in *ngFor and display before the skill name-->
     </div>
   </div>
 </div>
