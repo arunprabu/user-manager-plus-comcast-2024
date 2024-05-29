@@ -17,3 +17,6 @@
 
 14. Access data from child component using @ViewChild()
 15. Routing through Typescript in Go back button in Add user comp 
+16. Learn about disabling the submit button in case of error in form of add user component 
+17. Implement Max 10 digits for phone number validation
+

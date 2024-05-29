@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-add-user',
@@ -11,7 +12,9 @@ export class AddUserComponent {
   // step 1: Have the equivalent ts logic for the form tag
   addUserForm!: FormGroup;
 
-  constructor() {
+  isSaved = false;
+
+  constructor( private userService: UserService) {
     // Step 1 continues...
     this.addUserForm = new FormGroup({
       // step 2: Have the form element equivalents in ts
@@ -23,6 +26,16 @@ export class AddUserComponent {
   }
 
   handleAddUser() {
+    // submittable form data 
     console.log(this.addUserForm.value);
+
+    // 1. Connect to the service using Dep Injection (Refer constructor)
+    // 2. send the above form data to the Service
+    this.userService.addUser(this.addUserForm.value)
+      .subscribe((res: any) => {
+        // 3. get the response from service
+        console.log(res);
+        this.isSaved = true;
+      })
   }
 }

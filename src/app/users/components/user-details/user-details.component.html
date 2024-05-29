@@ -4,13 +4,13 @@
     <div class="card col-md-12">
       <!-- TODO: show loader/spinner here-->
       <div class="card-body">
-        <h5 class="card-title">John</h5>
+        <h5 class="card-title">{{user?.name}}</h5>
         <p class="card-text">
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </p>
-        <p>Phone: 345678678</p>
-        <p>Email: a@g.com</p>
+        <p>Phone: {{user?.phone}}</p>
+        <p>Email: {{user?.email}}</p>
         <button
           type="button"
           class="btn btn-primary"
@@ -43,9 +43,9 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body" *ngIf="duplicateUser">
                 <!-- if you want html validation use ngNativeValidate in form tag -->
-                <form >
+                <form (ngSubmit)="handleUpdateUser()" ngNativeValidate>
                   <div class="form-group row mb-3">
                     <label for="nameInput" class="col-sm-2 col-form-label"
                       >Name</label
@@ -57,6 +57,8 @@
                         class="form-control"
                         placeholder="Enter name"
                         required
+                        [(ngModel)]="duplicateUser.name"
+                        name="nameInput"
                       />
                       <div class="invalid-feedback">Name is Required</div>
                     </div>
@@ -72,6 +74,8 @@
                         class="form-control"
                         placeholder="Enter Phone"
                         required
+                        [(ngModel)]="duplicateUser.phone"
+                        name="phoneInput"
                       />
                       <div class="invalid-feedback">Phone is Required</div>
                     </div>
@@ -87,6 +91,8 @@
                         class="form-control"
                         placeholder="Enter Email"
                         required
+                        [(ngModel)]="duplicateUser.email"
+                        name="emailInput"
                       />
                       <div class="invalid-feedback">
                         <div>Email is Required</div>
@@ -95,7 +101,7 @@
                     </div>
                   </div>
 
-                  <div class="alert alert-success">
+                  <div class="alert alert-success" *ngIf="isUpdated">
                     Updated successfully!
                   </div>
 

@@ -118,7 +118,7 @@ Concepts
 -----
   Data Binding [DONE]
   Routing [PARTIALLY COMPLETED]
-  Forms [TODAY]
+  Forms [DONE]
   REST API Calls [TODAY]
   
 
@@ -223,7 +223,7 @@ Forms in Angular
         1. Not suitable for Complex Form validations 
         2. Not suitable for Unit Testing 
 
-    2. Reactive Forms [RECOMMENDED]
+    2. Reactive Forms a.k.a Data-Driven Forms [RECOMMENDED]
        * made with html + ts 
        * validation thru ts 
        * easy 
@@ -247,3 +247,33 @@ Forms in Angular
   step 4: connect the html form elements with the ts equivalents 
 
   step 5: Let's work on validations 
+
+
+=====
+CRUD 
+---
+  Add User  [DONE]
+    API Url     : https://jsonplaceholder.typicode.com/users  
+    Http Method : POST 
+
+  List Users  
+    API Url     : https://jsonplaceholder.typicode.com/users  
+    Http Method : GET 
+
+  User Details
+    API Url     : https://jsonplaceholder.typicode.com/users/1  
+    Http Method : GET 
+
+  Update User Details
+    API Url     : https://jsonplaceholder.typicode.com/users/1  
+    Http Method : PUT/PATCH  
+  
+  Delete User Details
+    API Url     : https://jsonplaceholder.typicode.com/users/1  
+    Http Method : DELETE  
+
+  
+  We need a service layer.
+    UserService 
+    ng g s users/services/user 
+=====

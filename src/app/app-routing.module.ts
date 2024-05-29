@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'concepts', component: ConceptsComponent },
   { path: 'users', component: ListUsersComponent },
   { path: 'users/add', component: AddUserComponent },
-  { path: 'users/1', component: UserDetailsComponent },
+  { path: 'users/:userId', component: UserDetailsComponent }, // Url parameter is userId
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
 ];

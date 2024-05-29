@@ -17,6 +17,7 @@ import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { ListUsersComponent } from './users/components/list-users/list-users.component';
 import { AddUserComponent } from './users/components/add-user/add-user.component';
 import { UserDetailsComponent } from './users/components/user-details/user-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Main Switching Box
 @NgModule({
@@ -40,7 +41,8 @@ import { UserDetailsComponent } from './users/components/user-details/user-detai
     BrowserModule,
     AppRoutingModule,
     FormsModule, // for Template Driven Form
-    ReactiveFormsModule // for Reactive Forms
+    ReactiveFormsModule, // for Reactive Forms
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule is bootstraped with a component -- AppComponent
