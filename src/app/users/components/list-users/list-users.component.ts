@@ -24,11 +24,11 @@ export class ListUsersComponent implements OnInit {
     // 1. connect to the service (refer constructor)
     // 2. send the request to the service
     this.userService.getUsers()
-      .subscribe((res: IUser[]) => {
+      .subscribe((res: any) => {
         // 3. get the response from service
         console.log(res);
         this.users = res;
-      })
+      });
   }
 
 

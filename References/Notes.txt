@@ -108,11 +108,11 @@ Building Blocks
   Components [PARTIALLY COMPLETED]
   Directives [DONE]
   Services [DONE]
-  Interfaces / Models [TODAY] 
-  Modules [TODAY]
-  Guards [TODAY and TOMORROW]
+  Interfaces / Models [DONE] 
+  Modules [DONE]
+  Guards [TOMORROW]
   Pipes [TOMORROW]
-  Interceptor [NOT TO BE COVERED]
+
 
 Concepts
 -----
@@ -120,9 +120,9 @@ Concepts
   Routing [DONE]
   Forms [DONE]
   REST API Calls [DONE]
-  RxJS [30 mins]
-  Any to Any Component Commn [~1.5 hours]
-  Authentication [TOMORROW]
+  RxJS [Done]
+  Any to Any Component Commn [30 mins tomorrow]
+  Authentication [45 mins - 1 hour]
   Build and Deployment [TOMORROW]
   Unit Testing Intro [TOMORROW]
 
@@ -283,3 +283,47 @@ CRUD
 =====
 
 
+
+====
+Modules 
+----
+  FeatureModule (Main switching for the flat)
+
+  FeatureRoutingModule  (main navigational map for the map)
+
+
+  Feature: ProductsModule
+  FeatureRoutingModule: ProductsRoutingModule 
+
+
+
+    List Products (Component )
+      ng g c products/list-products -s -t
+      localhost:4200/products   
+
+    Product Details (Component)
+      ng g c products/product-details -s -t
+      localhost:4200/products/1 
+
+    Add Product (Component )
+      localhost:4200/products/add 
+
+
+=======
+  ng g m products -m=app 
+  ng g m products/products-routing --flat -m=products
+
+  ng g c products/list-products -s -t
+  ng g c products/product-details -s -t
+
+
+
+
+
+
+
+
+
+====
+ng g m users -m=app 
+ng g m users/users-routing --flat -m=users

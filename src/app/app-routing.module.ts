@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'users/add', component: AddUserComponent },
   { path: 'users/:userId', component: UserDetailsComponent }, // Url parameter is userId
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({

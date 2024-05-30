@@ -28,21 +28,14 @@ export class UserService {
   }
 
   // 1. get the request from comp.ts
-  getUsers(): Observable<IUser[]> {
+  getUsers(){
     console.log('Request reached service');
     // 2. send the request to the REST API
     // 2.1 What's REST API Url? https://jsonplaceholder.typicode.com/users
     // 2.2 What's Http Method?  GET
     // 2.3 What's the REST API Client? HttpClient
     return this.http
-      .get<IUser[]>('https://jsonplaceholder.typicode.com/users')
-      .pipe(
-        map((res: IUser[]) => {
-          // 3. get the response from REST API
-          console.log(res);
-          return res; // 4. send the response to comp.ts
-        })
-      );
+      .get('https://jsonplaceholder.typicode.com/users')
   }
 
   getUserById(id: string | null): Observable<IUser> {
