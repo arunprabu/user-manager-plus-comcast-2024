@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
+import { IUser } from '../../models/iuser';
 
 @Component({
   selector: 'app-add-user',
@@ -26,13 +27,13 @@ export class AddUserComponent {
   }
 
   handleAddUser() {
-    // submittable form data 
+    // entire form 
     console.log(this.addUserForm.value);
 
     // 1. Connect to the service using Dep Injection (Refer constructor)
     // 2. send the above form data to the Service
     this.userService.addUser(this.addUserForm.value)
-      .subscribe((res: any) => {
+      .subscribe((res: IUser) => {
         // 3. get the response from service
         console.log(res);
         this.isSaved = true;

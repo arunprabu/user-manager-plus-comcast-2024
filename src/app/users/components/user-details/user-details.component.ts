@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { ActivatedRoute } from '@angular/router';
+import { IUser } from '../../models/iuser';
 
 @Component({
   selector: 'app-user-details',
@@ -8,8 +9,13 @@ import { ActivatedRoute } from '@angular/router';
   styles: [],
 })
 export class UserDetailsComponent implements OnInit {
-  user: any;
-  duplicateUser: any;
+  user: IUser = {
+    id: 0,
+    name: '',
+    phone: '',
+    email: '',
+  };
+  duplicateUser!: IUser;
   isUpdated = false;
 
   constructor(
@@ -24,21 +30,22 @@ export class UserDetailsComponent implements OnInit {
 
     // whenever this component is coming into view -- this method is called
     // this is the ideal place for you to make REST API call
-    this.userService.getUserById(userId).subscribe((res: any) => {
+    this.userService.getUserById(userId).subscribe((res: IUser) => {
       console.log(res);
       this.user = res;
-      this.duplicateUser = { ...this.user };
+      this.duplicateUser = {
+        ...this.user,
+      };
     });
   }
 
   handleUpdateUser() {
     console.log(this.duplicateUser); // form data
 
-    this.userService.updateUser(this.duplicateUser)
-      .subscribe((res: any) => {
-        console.log(res);
-        this.user = res;
-        this.isUpdated = true;
-      })
+    this.userService.updateUser(this.duplicateUser).subscribe((res: IUser) => {
+      console.log(res);
+      this.user = res;
+      this.isUpdated = true;
+    });
   }
 }

@@ -107,20 +107,24 @@ Building Blocks
 -----
   Components [PARTIALLY COMPLETED]
   Directives [DONE]
-  Services [TODAY]
-  Interfaces / Models 
-  Modules 
-  Guards
-  Pipes 
-  Interceptor 
+  Services [DONE]
+  Interfaces / Models [TODAY] 
+  Modules [TODAY]
+  Guards [TODAY and TOMORROW]
+  Pipes [TOMORROW]
+  Interceptor [NOT TO BE COVERED]
 
 Concepts
 -----
   Data Binding [DONE]
-  Routing [PARTIALLY COMPLETED]
+  Routing [DONE]
   Forms [DONE]
-  REST API Calls [TODAY]
-  
+  REST API Calls [DONE]
+  RxJS [30 mins]
+  Any to Any Component Commn [~1.5 hours]
+  Authentication [TOMORROW]
+  Build and Deployment [TOMORROW]
+  Unit Testing Intro [TOMORROW]
 
 Project Structure
 ----
@@ -277,3 +281,5 @@ CRUD
     UserService 
     ng g s users/services/user 
 =====
+
+

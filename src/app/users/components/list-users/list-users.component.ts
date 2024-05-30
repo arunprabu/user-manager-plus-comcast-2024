@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { IUser } from '../../models/iuser';
 
 @Component({
   selector: 'app-list-users',
@@ -8,7 +9,7 @@ import { UserService } from '../../services/user.service';
   ]
 })
 export class ListUsersComponent implements OnInit {
-  users: any[] = [];
+  users: IUser[] = [];
 
   constructor(private userService: UserService) {
     console.log('inside ListUsersComponent constructor');
@@ -23,7 +24,7 @@ export class ListUsersComponent implements OnInit {
     // 1. connect to the service (refer constructor)
     // 2. send the request to the service
     this.userService.getUsers()
-      .subscribe((res: any) => {
+      .subscribe((res: IUser[]) => {
         // 3. get the response from service
         console.log(res);
         this.users = res;
