@@ -110,9 +110,8 @@ Building Blocks
   Services [DONE]
   Interfaces / Models [DONE] 
   Modules [DONE]
-  Guards [TOMORROW]
-  Pipes [TOMORROW]
-
+  Guards [DONE]
+  Pipes [TODAY] 
 
 Concepts
 -----
@@ -121,10 +120,11 @@ Concepts
   Forms [DONE]
   REST API Calls [DONE]
   RxJS [Done]
-  Any to Any Component Commn [30 mins tomorrow]
-  Authentication [45 mins - 1 hour]
-  Build and Deployment [TOMORROW]
-  Unit Testing Intro [TOMORROW]
+  Any to Any Component Commn [DONE]
+  Authentication [DONE]
+  Build and Deployment [TODAY]
+    Lazy Loading 
+  Unit Testing Intro [TODAY]
 
 Project Structure
 ----
@@ -177,16 +177,15 @@ Data Binding
 Cross Component Communication
 --------
   1. Parent to Child Component Communication  [DONE]
-      using Custom Property Binding 
+      using Custom Property Binding @Input 
 
   2. Child to Parent Component Communication [DONE]
-      using Custom Event Binding 
+      using Custom Event Binding @Output()
 
   3. Any to Any Component Communication
-      3.1 using RxJS + Observables (TO LEARN)
-        Prereq: Service, Dep Injection, RxJS + Observables 
-      3.2 using NgRx  (State management framework)  
-
+      3.1 using RxJS + Observables (DONE)
+        Prereq: Service, Dep Injection, RxJS + Observables, Subscription
+      3.2 using NgRx  (State management framework)
 
 =============
 
@@ -318,12 +317,19 @@ Modules
 
 
 
-
-
-
-
-
-
 ====
-ng g m users -m=app 
-ng g m users/users-routing --flat -m=users
+ng g m auth -m=app 
+ng g m auth/auth-routing --flat -m=auth
+
+
+
+
+Authentication
+----
+  1. once you login with right credentials, you will be give a token (JWT)
+    2. keep the token in browser (cookie / session storage / local storage)
+
+Guard
+-----
+  ng g g shared/guards/auth 
+    

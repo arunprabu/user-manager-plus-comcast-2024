@@ -19,6 +19,7 @@ import { AddUserComponent } from './users/components/add-user/add-user.component
 import { UserDetailsComponent } from './users/components/user-details/user-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsModule } from './products/products.module';
+import { AuthModule } from './auth/auth.module';
 
 // Main Switching Box
 @NgModule({
@@ -45,6 +46,7 @@ import { ProductsModule } from './products/products.module';
     ReactiveFormsModule, // for Reactive Forms
     HttpClientModule,
     ProductsModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent], // AppModule is bootstraped with a component -- AppComponent

@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ListUsersComponent } from './users/components/list-users/list-users.component';
 import { AddUserComponent } from './users/components/add-user/add-user.component';
 import { UserDetailsComponent } from './users/components/user-details/user-details.component';
+import { authGuard } from './shared/guards/auth.guard';
 
 // Configure your routes here
 const routes: Routes = [
@@ -15,8 +16,8 @@ const routes: Routes = [
   { path: 'users', component: ListUsersComponent },
   { path: 'users/add', component: AddUserComponent },
   { path: 'users/:userId', component: UserDetailsComponent }, // Url parameter is userId
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'about', component: AboutComponent, canActivate: [authGuard] },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
