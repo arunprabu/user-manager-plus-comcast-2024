@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartDataService } from '../../services/cart-data.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css'] // css 
 })
 export class HeaderComponent {
-  // ts 
+  cartCount: number = 0;
+
+  constructor( private cartDataService: CartDataService) {
+    this.cartDataService.latestCartItems$.subscribe((res) => {
+      console.log(res);
+      this.cartCount = res.length;
+    });
+  }
 }

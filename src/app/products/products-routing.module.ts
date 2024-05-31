@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ListProductsComponent } from './list-products/list-products.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ListProductsComponent } from './components/list-products/list-products.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
   { path: 'products', component: ListProductsComponent },

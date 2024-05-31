@@ -31,5 +31,11 @@ export class ListUsersComponent implements OnInit {
       });
   }
 
+  ngOnDestroy(): void {
+    console.log('ListUsersComponent goes out of the view');
+    // This is the ideal place for you to release any resource you may have
+    // you can also unsubscribe here
+    this.users.length = 0;
+  }
 
 }

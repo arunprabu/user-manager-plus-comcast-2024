@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartDataService } from 'src/app/shared/services/cart-data.service';
 
 @Component({
   selector: 'app-list-products',
@@ -20,9 +21,11 @@ import { Component } from '@angular/core';
 
               <div class="card-body">
                 <h4 class="card-title">
-                  <a routerLink="/products/{{ product.id }}" title="View Product">{{
-                    product.name
-                  }}</a>
+                  <a
+                    routerLink="/products/{{ product.id }}"
+                    title="View Product"
+                    >{{ product.name }}</a
+                  >
                 </h4>
 
                 <p class="card-text">Category: {{ product.category }}</p>
@@ -31,7 +34,10 @@ import { Component } from '@angular/core';
                     <p>$ {{ product.price }}</p>
                   </div>
                   <div class="col">
-                    <button class="btn btn-success btn-block">
+                    <button
+                      class="btn btn-success btn-block"
+                      (click)="handleAddToCart(product)"
+                    >
                       Add to cart
                     </button>
                   </div>
@@ -48,7 +54,7 @@ import { Component } from '@angular/core';
 export class ListProductsComponent {
   products: any[] = [];
 
-  constructor() {
+  constructor(private cartDataService: CartDataService) {
     this.products = [
       {
         id: 1,
@@ -75,5 +81,10 @@ export class ListProductsComponent {
         price: 40,
       },
     ];
+  }
+
+  handleAddToCart(product: any) {
+    console.log(product);
+    this.cartDataService.updateCart(product);
   }
 }
