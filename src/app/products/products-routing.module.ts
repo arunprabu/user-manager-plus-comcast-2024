@@ -6,8 +6,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { authGuard } from '../shared/guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'products', component: ListProductsComponent, canActivate: [authGuard] },
-  { path: 'products/:id', component: ProductDetailsComponent },
+  { path: '', component: ListProductsComponent, canActivate: [authGuard] },
+  { path: ':id', component: ProductDetailsComponent },
 ];
 
 @NgModule({

@@ -111,7 +111,7 @@ Building Blocks
   Interfaces / Models [DONE] 
   Modules [DONE]
   Guards [DONE]
-  Pipes [TODAY] 
+  Pipes [DONE]
 
 Concepts
 -----
@@ -122,8 +122,8 @@ Concepts
   RxJS [Done]
   Any to Any Component Commn [DONE]
   Authentication [DONE]
-  Build and Deployment [TODAY]
-    Lazy Loading 
+  Build and Deployment [DONE]
+    Lazy Loading [DONE]
   Unit Testing Intro [TODAY]
 
 Project Structure
@@ -333,3 +333,16 @@ Guard
 -----
   ng g g shared/guards/auth 
     
+====
+Pipes 
+---
+  * building blocks
+  * Tiny utilities to transform information from one format to another format
+  * lowercase to uppercase 
+
+  ng g p shared/pipes/ellipsis 
+
+  1. Pure Pipes 
+  2. Impure Pipes 
+
+=====

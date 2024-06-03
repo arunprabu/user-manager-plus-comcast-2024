@@ -1,1 +1,31 @@
-<p>about works!</p>
+<div class="container">
+  <h1>Pipes Demo</h1>
+  <p>{{sampleText}}</p>
+  <h2>Uppercase & titlecase demo</h2>
+  <p>{{sampleText | uppercase}}</p>
+  <p>{{sampleText | titlecase}}</p>
+
+  <h2>Date Pipe demo</h2>
+  <p>{{today}}</p>
+  <p>{{today | date}}</p>
+  <p>{{today | date: 'short'}}</p>
+  <p>{{today | date: 'medium'}}</p>
+  <p>{{today | date: 'long'}}</p>
+  <p>{{today | date: 'full'}}</p>
+  <p>{{today | date: 'shortDate'}}</p>
+  <p>{{today | date: 'MMMM dd, yyyy hh:mm:ss a'}}</p>
+  <p>{{today | date: 'dd MMM, yyyy - hh:mm:ss a'}}</p>
+
+  <h2>Custom Pipe demo</h2>
+  <p>Without pipe</p>
+  <p>{{newsText}}</p>
+
+  <p>With ellipsis pipe</p>
+  <p>{{newsText | ellipsis}}</p>
+  <p>{{newsText | ellipsis: 48}}</p>
+  <p>{{newsText | ellipsis: 128}}</p>
+
+  <!-- when the ellipsis pipe impure even if the category is change -- the re-render will happen-->
+  <input type="text" [(ngModel)]="category">
+
+</div>

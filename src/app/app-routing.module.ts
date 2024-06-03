@@ -16,8 +16,16 @@ const routes: Routes = [
   { path: 'users', component: ListUsersComponent },
   { path: 'users/add', component: AddUserComponent },
   { path: 'users/:userId', component: UserDetailsComponent }, // Url parameter is userId
-  { path: 'about', component: AboutComponent, canActivate: [authGuard] },
-  { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent, canActivate: [authGuard] },
+  {
+    path: 'products', 
+    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  }
 ];
 
 @NgModule({
